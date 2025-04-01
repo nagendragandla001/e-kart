@@ -17,8 +17,6 @@ const Movies = () => {
     dispatch(getMoviesRequest());
   }, []);
 
-  console.log("Movies - - - ", movies, error, loading);
-
   if (loading) {
     return <PageSkeletion />;
   } else if (error) {
