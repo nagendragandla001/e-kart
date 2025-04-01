@@ -1,0 +1,37 @@
+import { Link } from "react-router-dom";
+
+const Header = () => {
+  return (
+    <header className="bg-gray-800 text-white p-4 flex items-center justify-between">
+      <Link to="/">
+        <h1 className="text-2xl">E Kart</h1>
+      </Link>
+      <nav>
+        <ul className="flex space-x-4">
+          <li>
+            <Link to="/" className="hover:text-gray-400">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="hover:text-gray-400">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/cars" className="hover:text-gray-400">
+              Cars
+            </Link>
+          </li>
+          <li>
+            <Link to="/movies" className="hover:text-gray-400">
+              Movies
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
