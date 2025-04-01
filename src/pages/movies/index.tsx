@@ -38,10 +38,8 @@ const Movies = () => {
               className="w-full h-48 object-cover rounded-t-lg"
             />
             <div className="p-2 flex-grow w-full">
-              <div className="flex flex-row items-center justify-between">
-                <h2 className="text-lg font-semibold">{`${movie.title} ${movie.year}`}</h2>
-                <p className="text-gray-600">{`$${movie.awards}`}</p>
-              </div>
+              <h2 className="text-lg font-semibold">{`${movie.title} ${movie.year}`}</h2>
+              <p className="text-gray-600">{`$${movie.awards}`}</p>
               <p className="text-gray-600">{`${movie.director} - ${movie.rating}`}</p>
             </div>
           </div>
