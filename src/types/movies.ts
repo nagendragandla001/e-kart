@@ -1,4 +1,4 @@
-export interface Movies {
+export interface Movie {
   id: number;
   title: string;
   year: number;
@@ -24,7 +24,13 @@ export interface MoviesAction {
 }
 
 export interface MovieState {
-  movies: Movies[];
+  movie: Movie;
+  loading: boolean;
+  error: string;
+}
+
+export interface MoviesState {
+  movies: Movie[];
   loading: boolean;
   error: string;
 }

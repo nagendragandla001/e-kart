@@ -30,4 +30,9 @@ export const AppRoutes = [
     name: "Movies",
     component: () => import("../pages/movies"),
   },
+  {
+    path: "movies/:id",
+    name: "Movie",
+    component: () => import("../pages/movies/details"),
+  },
 ];

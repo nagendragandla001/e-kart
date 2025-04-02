@@ -1,7 +1,7 @@
 import { getMoviesRequest } from "../../actions/movies";
 import PageSkeletion from "../../components/PageSkeletion";
 import { RootState } from "@/types/common";
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Dispatch } from "redux";
@@ -10,12 +10,12 @@ const Movies = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch<Dispatch<any>>();
   const { movies, loading, error } = useSelector(
-    (state: RootState) => state.movieReducer
+    (state: RootState) => state.moviesReducer
   );
 
   useEffect(() => {
     dispatch(getMoviesRequest());
-  }, []);
+  }, [dispatch, getMoviesRequest]);
 
   if (loading) {
     return <PageSkeletion />;

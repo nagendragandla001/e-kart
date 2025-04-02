@@ -13,11 +13,8 @@ const Cars = () => {
   );
 
   useEffect(() => {
-    // fetch only if cars is empty
-    if (!cars || cars.length === 0) {
-      dispatch(getCarsRequestAction());
-    }
-  }, [dispatch, cars]);
+    dispatch(getCarsRequestAction());
+  }, [dispatch, getCarsRequestAction]);
 
   if (loading) {
     return <PageSkeletion />;
