@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
+import InputButtonComponent from "./InputButtonComponent";
 
 function Home() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <h1 className="text-lg font-semibold">Home component</h1>
       <button
         className="px-2 py-2 border rounded cursor-pointer hover:bg-gray-200"
@@ -13,6 +14,8 @@ function Home() {
       >
         Open Modal
       </button>
+
+      <InputButtonComponent />
 
       <Modal isOpen={isOpen} onClose={() => setOpen(false)}>
         <h1 className="text-lg font-semibold">Modal component</h1>
