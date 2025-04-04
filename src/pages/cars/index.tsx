@@ -1,6 +1,6 @@
 import PageSkeletion from "../../components/PageSkeletion";
 import { getCarsRequestAction } from "../../actions/cars";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { RootState } from "@/types/common";

@@ -1,6 +1,7 @@
 {
   "transform": {
-    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    "^.+\\.tsx?$": "babel-jest",
+    "^.+\\.jsx?$": "babel-jest"
   },
   "moduleNameMapper": {
     "\\.module\\.css$": "identity-obj-proxy"
@@ -10,5 +11,14 @@
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/build/"
+  ],
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["json", "text", "lcov", "clover"],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/index.tsx", 
+    "!src/reportWebVitals.ts",
+    "!src/setupTests.ts"
   ]
 }

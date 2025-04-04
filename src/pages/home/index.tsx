@@ -7,8 +7,11 @@ function Home() {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="text-lg font-semibold">Home component</h1>
+      <h1 className="text-lg font-semibold" data-testid="title">
+        Home component
+      </h1>
       <button
+        data-testid="openmodal"
         className="px-2 py-2 border rounded cursor-pointer hover:bg-gray-200"
         onClick={() => setOpen(true)}
       >

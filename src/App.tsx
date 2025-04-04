@@ -3,7 +3,6 @@ import Header from "./components/header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppRoutes } from "./routes/routeConfig";
 import Layout from "./components/Layout";
-import PageSkeletion from "./components/PageSkeletion";
 import NotFound from "./components/NotFound";
 import PageLoadSpinner from "./components/PageLoadSpinner";
 const App = () => {
