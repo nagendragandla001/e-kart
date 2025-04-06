@@ -5,6 +5,7 @@ import { AppRoutes } from "./routes/routeConfig";
 import Layout from "./components/Layout";
 import NotFound from "./components/NotFound";
 import PageLoadSpinner from "./components/PageLoadSpinner";
+import Login from "./pages/login";
 const App = () => {
   return (
     <Router>
@@ -26,7 +27,7 @@ const App = () => {
               />
             );
           })}
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Login />} />
         </Route>
       </Routes>
     </Router>

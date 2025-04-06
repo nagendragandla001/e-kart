@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-lg font-semibold" data-testid="title">
-        Home component
+        Home Component
       </h1>
       <button
         data-testid="openmodal"

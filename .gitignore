@@ -39,3 +39,10 @@ Thumbs.db
 # React specific files
 package-lock.json
 yarn.lock
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

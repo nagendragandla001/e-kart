@@ -1,6 +1,11 @@
 export const AppRoutes = [
   {
     path: "",
+    name: "Login",
+    component: () => import("../pages/login"),
+  },
+  {
+    path: "home",
     name: "Home",
     index: true,
     component: () => import("../pages/home"),
@@ -9,6 +14,12 @@ export const AppRoutes = [
     path: "account",
     name: "Account",
     component: () => import("../pages/account"),
+  },
+  {
+    path: "login",
+    name: "Login",
+    index: true,
+    component: () => import("../pages/login"),
   },
   {
     path: "dashboard",
