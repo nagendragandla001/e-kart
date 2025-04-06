@@ -7,6 +7,7 @@ function Home() {
 
   return (
     <div className="flex flex-col gap-4">
+      <title>Home Component</title>
       <h1 className="text-lg font-semibold" data-testid="title">
         Home Component
       </h1>
