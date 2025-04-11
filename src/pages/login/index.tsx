@@ -10,6 +10,8 @@ const Login = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
+    localStorage.setItem("token", new Date().toString());
+
     navigate("/home");
   };
 

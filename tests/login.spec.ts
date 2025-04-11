@@ -13,8 +13,8 @@ test("Page should navigate to Home Page after Successful Login", async ({
 
   await expect(page.getByRole("button", { name: "Submit" })).toBeDisabled();
 
-  const username = page.locator('[data-testid="username"]');
-  const password = page.locator('[data-testid="password"]');
+  const username = page.getByTestId("username");
+  const password = page.getByTestId("password");
   const submitBtn = page.getByRole("button", { name: "Submit" });
 
   await username.fill("Nagendra");
