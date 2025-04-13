@@ -27,6 +27,11 @@ export const AppRoutes = [
     component: () => import("../pages/dashboard"),
   },
   {
+    path: "/thumbnails",
+    name: "Thumbnails",
+    component: () => import("../pages/thumbnails"),
+  },
+  {
     path: "cars",
     name: "Cars",
     component: () => import("../pages/cars"),
