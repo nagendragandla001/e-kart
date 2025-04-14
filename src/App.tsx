@@ -21,7 +21,7 @@ const App = () => {
                 index={route.index || false}
                 element={
                   <Suspense fallback={<PageLoadSpinner />}>
-                    <Component />
+                    <Component hasIcon={true} />
                   </Suspense>
                 }
               />

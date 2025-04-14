@@ -1,12 +1,16 @@
-import { useMemo, useState } from "react";
+import { JSX, useMemo, useState } from "react";
 import Thumbnail from "./Thumbnail";
 import "./thumbnails.css";
 import { MdOutlineEdit, MdOutlineClose } from "react-icons/md";
+import { AiOutlineKubernetes, AiOutlineDocker } from "react-icons/ai";
+import { SiAmazonec2, SiAmazons3 } from "react-icons/si";
+import { IconType } from "react-icons";
 
 export interface ThumbnailType {
   name: string;
   id: string;
   disabled: boolean;
+  icon: JSX.Element;
 }
 
 const items = [
@@ -14,31 +18,37 @@ const items = [
     name: "Kubernetes",
     id: "kubernetes",
     disabled: false,
+    icon: <AiOutlineKubernetes />,
   },
   {
     name: "docker",
     id: "docker",
     disabled: false,
+    icon: <AiOutlineDocker />,
   },
   {
     name: "EC2",
     id: "ec2",
     disabled: false,
+    icon: <SiAmazonec2 />,
   },
   {
     name: "S3 Bucket",
     id: "s3bucket",
     disabled: false,
+    icon: <SiAmazons3 />,
   },
   {
     name: "Manual Server",
     id: "manual",
     disabled: true,
+    icon: <SiAmazons3 />,
   },
   {
     name: "Static Server",
     id: "static",
     disabled: false,
+    icon: <SiAmazons3 />,
   },
 ];
 
@@ -55,7 +65,12 @@ const BTN_CONFIG: any = {
   },
 };
 
-const Thumbnails = () => {
+interface ThumbnailsProps {
+  hasIcon: boolean;
+}
+
+const Thumbnails = (props: ThumbnailsProps) => {
+  const { hasIcon } = props;
   const [selected, setSelected] = useState<ThumbnailType | null>();
 
   const [status, setStatus] = useState<STATUS>(null);
@@ -87,6 +102,7 @@ const Thumbnails = () => {
             key={item.id}
             thumbnail={item}
             selected={item.id === selected?.id}
+            hasIcon={hasIcon}
             onClick={(thumbnail) =>
               item.id !== selected?.id && handleSelect(thumbnail)
             }
